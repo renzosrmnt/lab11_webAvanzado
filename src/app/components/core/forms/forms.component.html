@@ -1,0 +1,29 @@
+<!-- Form Layout -->
+<div class="card">
+  <div class="card-body">
+    <h4 class="mb-32">Nuevas Películas</h4>
+    <form (ngSubmit)="onSubmit()" [formGroup]="movieForm">
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Título</mat-label>
+        <input matInput type="text" formControlName="title" placeholder="Ingresa el título">
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Director(a)</mat-label>
+        <input matInput type="text" formControlName="director" placeholder="Ingresa al director">
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Género</mat-label>
+        <input matInput type="text" formControlName="genre" placeholder="Ingresa el género">
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Sinóspsis</mat-label>
+        <textarea matInput rows="6" formControlName="synopsis" placeholder="Ingresa la sinopsis"></textarea>
+      </mat-form-field>
+
+      <button mat-button class="btn btn-info fw-normal" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
