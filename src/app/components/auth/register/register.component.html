@@ -1,10 +1,9 @@
-<!-- register.component.html -->
 <body>
   <div class="background">
     <div class="shape"></div>
     <div class="shape"></div>
   </div>
-  <form (ngSubmit)="onSubmit()">
+  <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
     <h3>Registrarse</h3>
     <div>
       <label for="username">Usuario:</label>
@@ -18,7 +17,7 @@
     <br><br>
 
     <div>
-      <p>¿Ya tienes una cuenta? <span><a href="/login">Iniciar Sesión</a></span></p>
+      <p>¿Ya tienes una cuenta? <span><a href="/">Iniciar Sesión</a></span></p>
     </div>
 
   </form>

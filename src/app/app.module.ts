@@ -14,11 +14,12 @@ import { AppRoutingModule } from "./app-routing.module";
 import { DashboardModule } from "./components/dashboard/dashboard.module";
 import { ComponentsModule } from "./components/core/core.module";
 import { provideHttpClient } from "@angular/common/http";
+import { RegisterComponent } from './components/auth/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FullComponent
+    FullComponent, RegisterComponent
   ],
   imports: [
     BrowserModule,

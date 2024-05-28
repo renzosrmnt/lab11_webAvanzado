@@ -1,6 +1,6 @@
+// src/app/components/auth/register/register.component.ts
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  registerForm: FormGroup | null = null;
+  registerForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) { }
+  constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -20,17 +20,12 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-
-    if (this.registerForm?.valid) {
-
-      const username = this.registerForm.get('username')?.value;
-      const password = this.registerForm.get('password')?.value;
-      
-      console.log('Credenciales ingresadas:', { username, password });
-
-      console.log('Registro exitoso');
-
-      this.router.navigate(['/login']);
+    if (this.registerForm.valid) {
+      const formData = this.registerForm.value;
+      console.log('Usuario:', formData.username);
+      console.log('Contraseña:', formData.password);
+    } else {
+      console.log('Formulario inválido');
     }
   }
 }
