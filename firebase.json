@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "laboratorio-11-sarmiento",
+    "public": "/dist/frontend/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
